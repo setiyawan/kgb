@@ -3,8 +3,8 @@
 class UserConstant extends CI_Model {
 	function get_gender() {
 		return array(
-			'Laki-Laki' => 'Laki-Laki', 
-			'Perempuan' => 'Perempuan' 
+			'0' => 'Laki-Laki', 
+			'1' => 'Perempuan' 
 		);
 	}
 }

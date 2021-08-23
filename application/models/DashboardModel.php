@@ -2,58 +2,22 @@
 
 class DashboardModel extends CI_Model {
     
-    public function total_kasus($filter=[]) {
-        if (!empty($filter['id_upk'])) {
-            $this->db->where('id_upk', $filter['id_upk']);
+    public function total_pegawai($filter=[]) {
+        if (!empty($filter['bulan'])) {
+            $this->db->where('month(tgl_mengajukan_kgb)', $filter['bulan']);
+            $this->db->where('year(tgl_mengajukan_kgb)', $filter['tahun']);
         }
-        
-        return $this->db->count_all_results('gejala_diagnosa');
-    }
 
-    public function total_kasus_konfirmasi($filter=[]) {
-        if (!empty($filter['id_upk'])) {
-            $this->db->where('id_upk', $filter['id_upk']);
+        if (!empty($filter['berkas_url'])) {
+            $this->db->where('berkas_url <> ', '');
         }
-        $this->db->where('kategori_kasus', 'KONFIRMASI');
-        
-        return $this->db->count_all_results('gejala_diagnosa');
-    }
 
-    public function total_kasus_suspek($filter=[]) {
-        if (!empty($filter['id_upk'])) {
-            $this->db->where('id_upk', $filter['id_upk']);
+        if (!empty($filter['status'])) {
+            $this->db->where('status', $filter['status']);
         }
-        $this->db->where('kategori_kasus', 'SUSPEK');
-        
-        return $this->db->count_all_results('gejala_diagnosa');
-    }
 
-    public function total_kasus_probable($filter=[]) {
-        if (!empty($filter['id_upk'])) {
-            $this->db->where('id_upk', $filter['id_upk']);
-        }
-        $this->db->where('kategori_kasus', 'PROBABLE');
-        
-        return $this->db->count_all_results('gejala_diagnosa');
-    }
-
-    public function total_kontak_erat($filter=[]) {
-        if (!empty($filter['id_upk'])) {
-            $this->db->where('id_upk', $filter['id_upk']);
-        }
-        $this->db->where('pelacakan_kontak_erat', '1');
-        
-        return $this->db->count_all_results('gejala_diagnosa');
-    }
-
-    public function total_kasus_rapid_reaktif($filter=[]) {
-        if (!empty($filter['id_upk'])) {
-            $this->db->where('id_upk', $filter['id_upk']);
-        }
-        $this->db->where('rapid_test', '1');
-        
-        return $this->db->count_all_results('gejala_diagnosa');
-    }
+        return $this->db->count_all_results('pegawai');
+    } 
 
 }
 

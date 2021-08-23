@@ -4,6 +4,7 @@
     <style type="text/css">
       body {
         background-image: url(<?= base_url()?>/asset/images/kantorbupati.jpg);
+        background-position-y: -120px;
         background-repeat: no-repeat;
         background-size: cover;
         }
@@ -27,14 +28,16 @@
     <link rel="stylesheet" type="text/css" href="admin.css">
     <script src="https://kit.fontawesome.com/58b6e7182a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
-    <title>Sistem Surveilans COVID-19 Kab.Karawang</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url()?>asset/images/favicon.png">
+
+    <title>Sistem Kenaikan Gaji Berkala | Bappeda Kab. Madiun</title>
   </head>
   <body>
     
     <div class="container text-center">
-      <img src="<?= base_url()?>/asset/images/logokarawang.png" width="70px" height="85px" >
-      <h6 class="text-center mt-3">SISTEM SURVEILANS COVID-19</h6>
-      <h6 class="text-center">KABUPATEN KARAWANG</h6><hr>
+      <img src="<?= base_url()?>/asset/images/favicon.png" width="70px" height="85px" >
+      <h6 class="text-center mt-3">Sistem Kenaikan Gaji Berkala</h6>
+      <h6 class="text-center">Bappeda Kab. Madiun</h6><hr>
 
       <form method="post" action="<?= base_url()?>user/do_update_password">
         <div class="form-group text-left">

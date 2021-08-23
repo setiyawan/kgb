@@ -30,18 +30,20 @@ class Dashboard extends My_Controller {
     }
     
     public function index() {
-    	$filter = array();
-    	if ($this->get_session_by_id('tipe_upk') != 3) {
-    		$filter['id_upk'] = $this->get_session_by_id('id_upk');
-    	}
+    	$filter1['bulan'] = $this->TimeConstant->get_current_month();
+    	$filter1['tahun'] = $this->TimeConstant->get_current_year();
+    	
+    	$filter2['berkas_url'] = 1;
+    	$filter2 = array_merge($filter1, $filter2);
+
+    	$filter3['status'] = 1;
+    	$filter3 = array_merge($filter2, $filter3);    	
 
     	$data = array(
-    		'total_kasus' => $this->DashboardModel->total_kasus($filter),
-    		'total_kasus_konfirmasi' => $this->DashboardModel->total_kasus_konfirmasi($filter),
-    		'total_kasus_suspek' => $this->DashboardModel->total_kasus_suspek($filter),
-    		'total_kasus_probable' => $this->DashboardModel->total_kasus_probable($filter),
-    		'total_kontak_erat' => $this->DashboardModel->total_kontak_erat($filter),
-    		'total_kasus_rapid_reaktif' => $this->DashboardModel->total_kasus_rapid_reaktif($filter),
+    		'total_pegawai' => $this->DashboardModel->total_pegawai(),
+    		'total_kgb' => $this->DashboardModel->total_pegawai($filter1),
+    		'total_berkas' => $this->DashboardModel->total_pegawai($filter2),
+    		'total_terverifikasi' => $this->DashboardModel->total_pegawai($filter3),
     	);
 
 		$this->load->view('dashboard', $data);

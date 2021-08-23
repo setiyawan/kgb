@@ -33,9 +33,9 @@ class My_Controller extends CI_Controller {
 
         $this->load->model('constant/TimeConstant'); 
         $this->load->model('constant/UserConstant');
-        $this->load->model('constant/TracingConstant');
+        $this->load->model('constant/PegawaiConstant');
 
-        $this->load->model('Tracing');
+        $this->load->model('PegawaiModel');
         $this->load->model('DashboardModel');
 
         ini_set('display_error','off');
@@ -97,8 +97,8 @@ class My_Controller extends CI_Controller {
     protected function upload_image($file, $path, $file_name) {
     	//upload config 
 		$file_name = preg_replace("/[^A-Za-z0-9-]/", "-", $file_name).time();
-		$config['upload_path'] 		= './asset/img/' . $path;
-		$config['allowed_types'] 	= 'jpg|png|jpeg';
+		$config['upload_path'] 		= './asset/images/' . $path;
+		$config['allowed_types'] 	= 'jpg|png|jpeg|pdf';
 		$config['max_size'] 		= 10000;
 		$config['file_name'] 		= $file_name;
 

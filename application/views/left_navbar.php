@@ -4,13 +4,7 @@
       <a class="nav-link active active text-white" href="<?=base_url()?>dashboard"><i class="fas fa-tachometer-alt mr-2"></i>Dashboard</a><hr class="bg-secondary">
     </li>
     <li class="nav-item">
-      <a class="nav-link text-white" href="<?=base_url()?>kasus"><i class="fas fa-map-pin mr-2"></i>Kasus</a><hr class="bg-secondary">
-    </li>
-    <li class="nav-item">
-      <a class="nav-link text-white" href="<?=base_url()?>epidemiologi"><i class="fas fa-binoculars mr-2"></i>Penyelidikan Epidemiologi</a><hr class="bg-secondary">
-    </li>
-    <li class="nav-item">
-      <a class="nav-link text-white" href="<?=base_url()?>kontakerat"><i class="fas fa-user mr-2"></i>Kontak Erat</a><hr class="bg-secondary">
+      <a class="nav-link text-white" href="<?=base_url()?>pegawai"><i class="fas fa-user mr-2"></i>Pegawai</a><hr class="bg-secondary">
     </li>
     <li class="nav-item">
       <a class="nav-link text-white" href="<?=base_url()?>user/ganti_password"><i class="fas fa-lock mr-2"></i>Ganti Password</a><hr class="bg-secondary">
