@@ -67,7 +67,7 @@
           <input type="password" name="confirm_password" class="form-control" placeholder="Ulangi Password Baru Anda">
         </div>
         </div>
-        <button type="submit" class="btn btn-primary">LOG IN</button>
+        <button type="submit" class="btn btn-primary">Update Password</button>
       </form>
     </div>
 

@@ -5,7 +5,7 @@
       <?php $this->view('left_navbar'); ?>
       
       <div class="col-md-10 p-5 pt-2">
-        <h3><i class="fas fa-tachometer-alt mr-2"></i> DASHBOARD</h3><hr>
+        <h3><i class="fas fa-tachometer-alt mr-2"></i> Dashboard</h3><hr>
 
         <div class="row text-white">
           <div class="card bg-info ml-5" style="width: 18rem;">

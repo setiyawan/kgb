@@ -17,6 +17,7 @@
                 <th scope="col">Golongan</th>
                 <th scope="col">Gaji</th>
                 <th scope="col">Tgl KGB</th>
+                <th scope="col">Batas Tgl KGB</th>
                 <th scope="col">Berkas</th>
                 <th scope="col">Status</th>
                 <th colspan="1" scope="col">Aksi</th>
@@ -32,6 +33,7 @@
                 <td> <?= $value['golongan'] ?> </td>
                 <td> <?= $this->Converter->to_rupiah($value['gaji']) ?> </td>
                 <td> <?= $this->Converter->to_indonesia_date_full($value['tgl_mengajukan_kgb']) ?> </td>
+                <td> <?= $this->Converter->to_indonesia_date_full($value['batas_tgl_mengajukan_kgb']) ?> </td>
                 <td> <?= $value['berkas_url'] != '' ? 'Telah Diupload' : 'Belum Diupload' ?> </td>
                 <td> <?= $this->PegawaiConstant->verifikasi_data()[$value['status']] ?> </td>
                 <td>

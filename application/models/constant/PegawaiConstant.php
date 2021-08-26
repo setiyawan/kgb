@@ -8,8 +8,17 @@ class PegawaiConstant extends CI_Model {
 		);
 	}
 
+	function jenis_pegawai() {
+		return array(
+			'0' => 'Non PNS', 
+			'1' => 'PNS'
+		);
+	}
+
 	function golongan()	{
 		return array(
+			'-' => '-',
+
 			'IA' => 'IA',
 			'IB' => 'IB',
 			'IC' => 'IC',

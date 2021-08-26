@@ -67,7 +67,9 @@ class Pegawai extends My_Controller {
 		$data['no_telepon'] = $post['no_telepon'];
 		$data['tgl_lahir'] = $post['tgl_lahir'];
 		$data['golongan'] = $post['golongan'];
+		$data['jenis_pegawai'] = $post['jenis_pegawai'];
 		$data['tgl_mengajukan_kgb'] = $post['tgl_mengajukan_kgb'];
+		$data['batas_tgl_mengajukan_kgb'] = $post['batas_tgl_mengajukan_kgb'];
 		$data['status'] = $post['status'];
 		$data['gaji'] = $post['gaji'];
 
@@ -100,8 +102,10 @@ class Pegawai extends My_Controller {
 		$data['jenis_kelamin'] = $post['jenis_kelamin'];
 		$data['no_telepon'] = $post['no_telepon'];
 		$data['tgl_lahir'] = $post['tgl_lahir'];
+		$data['jenis_pegawai'] = $post['jenis_pegawai'];
 		$data['golongan'] = $post['golongan'];
 		$data['tgl_mengajukan_kgb'] = $post['tgl_mengajukan_kgb'];
+		$data['batas_tgl_mengajukan_kgb'] = $post['batas_tgl_mengajukan_kgb'];
 		$data['status'] = $post['status'];
 		$data['gaji'] = $post['gaji'];
 		$data['update_time'] = $this->TimeConstant->get_current_timestamp();

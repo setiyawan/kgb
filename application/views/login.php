@@ -59,7 +59,7 @@
           <input type="password" name="password" class="form-control" placeholder="Masukkan Password Anda">
         </div>
         </div>
-        <button type="submit" class="btn btn-primary">LOG IN</button>
+        <button type="submit" class="btn btn-primary">Log In</button>
       </form>
     </div>
 
