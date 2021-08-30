@@ -67,12 +67,12 @@
                 <input type="number" name="gaji" class="form-control" value="<?= $this->Ternary->isset_value($pegawai['gaji'])?>" required>
               </div>
               <div class="form-group">
-                <label>Tgl Mengajukan KGB</label>
-                <input type="date" name="tgl_mengajukan_kgb" class="form-control" value="<?= $this->Ternary->isset_value($pegawai['tgl_mengajukan_kgb'])?>">
+                <label>Tgl Terakhir KGB</label>
+                <input type="date" name="batas_tgl_mengajukan_kgb" class="form-control" value="<?= $this->Ternary->isset_value($pegawai['batas_tgl_mengajukan_kgb'])?>">
               </div>
               <div class="form-group">
-                <label>Batas Tgl Mengajukan KGB</label>
-                <input type="date" name="batas_tgl_mengajukan_kgb" class="form-control" value="<?= $this->Ternary->isset_value($pegawai['batas_tgl_mengajukan_kgb'])?>">
+                <label>Tgl Mengajukan KGB</label>
+                <input type="date" name="tgl_mengajukan_kgb" class="form-control" value="<?= $this->Ternary->isset_value($pegawai['tgl_mengajukan_kgb'])?>">
               </div>
               <div class="form-group">
                 <label>Berkas <?php if ($pegawai['berkas_url'] != '') { ?>  <a target="blank" href="<?= base_url() . 'asset/images/berkas/' .$pegawai['berkas_url'] ?>"> <i class="fa fa-external-link mr-2"> </i> </a>  <?php } ?> </label>
