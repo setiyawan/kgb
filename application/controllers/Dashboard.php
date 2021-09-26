@@ -30,8 +30,8 @@ class Dashboard extends My_Controller {
     }
     
     public function index() {
-    	$filter1['bulan'] = $this->TimeConstant->get_current_month();
-    	$filter1['tahun'] = $this->TimeConstant->get_current_year();
+    	$filter['kgb2bln'] = true;
+    	$filter1['kp2thn'] = true;
     	
     	$filter2['berkas_url'] = 1;
     	$filter2 = array_merge($filter1, $filter2);
@@ -41,7 +41,8 @@ class Dashboard extends My_Controller {
 
     	$data = array(
     		'total_pegawai' => $this->DashboardModel->total_pegawai(),
-    		'total_kgb' => $this->DashboardModel->total_pegawai($filter1),
+            'total_kgb' => $this->DashboardModel->total_pegawai($filter),
+    		'total_kp' => $this->DashboardModel->total_pegawai($filter1),
     		'total_berkas' => $this->DashboardModel->total_pegawai($filter2),
     		'total_terverifikasi' => $this->DashboardModel->total_pegawai($filter3),
     	);

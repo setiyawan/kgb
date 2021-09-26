@@ -15,6 +15,27 @@ class PegawaiConstant extends CI_Model {
 		);
 	}
 
+	function pendidikan_terakhir() {
+		return array(
+			'0' => 'SD/Sederajat', 
+			'1' => 'SLTP/Sederajat',
+			'2' => 'SLTA/Sederajat',
+			'3' => 'Diploma',
+			'4' => 'S1',
+			'5' => 'S2',
+			'6' => 'S3'
+		);
+	}
+
+	function eselon() {
+		return array(
+			'I' => 'I', 
+			'II' => 'II',
+			'III' => 'III', 
+			'IV' => 'IV' 
+		);
+	}
+
 	function golongan()	{
 		return array(
 			'-' => '-',

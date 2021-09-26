@@ -7,8 +7,27 @@ class PegawaiModel extends CI_Model {
             $this->db->where('id_pegawai', $filter['id_pegawai']);
         }
 
+        if (!empty($filter['kgb2bln'])) {
+            $where_caluse = 'tgl_mengajukan_kgb between now() and (NOW() + INTERVAL 2 MONTH)';
+            $this->db->where($where_caluse);
+        }
+
+        if (!empty($filter['kp2thn'])) {
+            $where_caluse = 'tmt_jabatan_berikutnya between now() and (NOW() + INTERVAL 2 YEAR)';
+            $this->db->where($where_caluse);
+        }
+
+        if (!empty($filter['berkas'])) {
+            $this->db->where('berkas_url <> ', '');
+        }
+
+        if (!empty($filter['verifikasi'])) {
+            $this->db->where('p.status', 1);
+        }
+
         $this->db->select('p.*, u.full_name');
         $this->db->join('user u', 'u.user_id = p.verify_by', 'left');
+        $this->db->order_by('p.id_pegawai', 'asc');
 
         return  $this->db->get('pegawai p')->result_array();
         // print_r($this->db->last_query());  

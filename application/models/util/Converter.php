@@ -80,6 +80,9 @@ class Converter extends CI_Model {
 	}
 
 	function to_indonesia_date_full($time_stamp) {
+		if ($time_stamp == '0000-00-00') {
+			return '-';
+		}
 		$date = date('d m Y', strtotime($time_stamp));
 		$split = explode(' ', $date);
 		return $split[0] . ' ' . $this->to_indonesia_full_month((int)$split[1]) . ' ' . $split[2];

@@ -8,35 +8,43 @@
         <h3><i class="fas fa-tachometer-alt mr-2"></i> Dashboard</h3><hr>
 
         <div class="row text-white">
-          <div class="card bg-info ml-5" style="width: 18rem;">
+          <div class="card bg-info ml-5" style="width: 15rem;">
               <div class="card-body">
               <h5 class="card-title"><i class="fas fa-user mr-2"></i>Total Pegawai</h5>
               <div class="display-4"><?= $total_pegawai ?></div>
-              <!-- <a href=""><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a> -->
+              <a href="<?=base_url()?>pegawai"><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>
           </div>
         </div>
 
-          <div class="card bg-info ml-5" style="width: 18rem;">
+          <div class="card bg-success ml-5" style="width: 17rem;">
               <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-calendar mr-2"></i>KGB Bulan Ini</h5>
+              <h5 class="card-title"><i class="fas fa-calendar mr-2"></i>KGB 2 Bulan Kedepan</h5>
               <div class="display-4"><?= $total_kgb ?></div>
-              <!-- <a href=""><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a> -->
+              <a href="<?=base_url()?>pegawai?filter=kgb2bln"><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>
           </div>
         </div>
 
-        <div class="card bg-info ml-5" style="width: 18rem;">
+        <div class="card bg-secondary ml-5" style="width: 17rem;">
+              <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-calendar mr-2"></i>KP 2 Tahun Kedepan</h5>
+              <div class="display-4"><?= $total_kp ?></div>
+              <a href="<?=base_url()?>pegawai?filter=kp2thn"><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>
+          </div>
+        </div>
+
+        <div class="card bg-secondary ml-5" style="width: 13rem;">
               <div class="card-body">
               <h5 class="card-title"><i class="fas fa-upload mr-2"></i>Upload Berkas</h5>
               <div class="display-4"><?= $total_berkas ?></div>
-              <!-- <a href=""><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a> -->
+              <a href="<?=base_url()?>pegawai?filter=kp2thn&berkas=true"><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>
           </div>
         </div>
 
-        <div class="card bg-info ml-5" style="width: 18rem;">
+        <div class="card bg-secondary ml-5" style="width: 13rem;">
               <div class="card-body">
               <h5 class="card-title"><i class="fas fa-check mr-2"></i>Terverifikasi</h5>
               <div class="display-4"><?= $total_terverifikasi ?></div>
-              <!-- <a href=""><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a> -->
+              <a href="<?=base_url()?>pegawai?filter=kp2thn&berkas=true&verifikasi=true"><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>
           </div>
         </div>
 

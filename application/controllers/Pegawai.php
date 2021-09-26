@@ -30,7 +30,23 @@ class Pegawai extends My_Controller {
     }
     
     public function index() {
-    	
+    	$get = $this->input->get();
+		if ($get['filter'] == 'kgb2bln') {
+			$filter['kgb2bln'] = true;
+		}
+
+		if ($get['filter'] == 'kp2thn') {
+			$filter['kp2thn'] = true;
+		}
+
+		if ($get['berkas'] == 'true') {
+			$filter['berkas'] = true;
+		}
+
+		if ($get['verifikasi'] == 'true') {
+			$filter['verifikasi'] = true;
+		}
+
     	$data['pegawai'] = $this->PegawaiModel->get_pegawai($filter);
 		
 		$this->load->view('pegawai', $data);
@@ -69,9 +85,16 @@ class Pegawai extends My_Controller {
 		$data['golongan'] = $post['golongan'];
 		$data['jenis_pegawai'] = $post['jenis_pegawai'];
 		$data['tgl_mengajukan_kgb'] = $post['tgl_mengajukan_kgb'];
-		$data['batas_tgl_mengajukan_kgb'] = $post['batas_tgl_mengajukan_kgb'];
+		$data['tmt_kgb'] = $post['tmt_kgb'];
 		$data['status'] = $post['status'];
 		$data['gaji'] = $post['gaji'];
+
+		$data['pendidikan_terakhir'] = $post['pendidikan_terakhir'];
+		$data['eselon'] = $post['eselon'];
+		$data['jabatan'] = $post['jabatan'];
+		$data['tmt_jabatan'] = $post['tmt_jabatan'];
+		$data['masa_kerja'] = $post['masa_kerja'];
+		$data['tmt_jabatan_berikutnya'] = $post['tmt_jabatan_berikutnya'];
 
 		if ($data['status'] == "1") {
 			$data['verify_by'] = $this->session->userdata('user_id');
@@ -105,10 +128,17 @@ class Pegawai extends My_Controller {
 		$data['jenis_pegawai'] = $post['jenis_pegawai'];
 		$data['golongan'] = $post['golongan'];
 		$data['tgl_mengajukan_kgb'] = $post['tgl_mengajukan_kgb'];
-		$data['batas_tgl_mengajukan_kgb'] = $post['batas_tgl_mengajukan_kgb'];
+		$data['tmt_kgb'] = $post['tmt_kgb'];
 		$data['status'] = $post['status'];
 		$data['gaji'] = $post['gaji'];
 		$data['update_time'] = $this->TimeConstant->get_current_timestamp();
+
+		$data['pendidikan_terakhir'] = $post['pendidikan_terakhir'];
+		$data['eselon'] = $post['eselon'];
+		$data['jabatan'] = $post['jabatan'];
+		$data['tmt_jabatan'] = $post['tmt_jabatan'];
+		$data['masa_kerja'] = $post['masa_kerja'];
+		$data['tmt_jabatan_berikutnya'] = $post['tmt_jabatan_berikutnya'];
 
 		if ($data['status'] == "1") {
 			$data['verify_by'] = $this->session->userdata('user_id');
