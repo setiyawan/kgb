@@ -35,8 +35,8 @@ class Pegawai extends My_Controller {
 			$filter['kgb2bln'] = true;
 		}
 
-		if ($get['filter'] == 'kp2thn') {
-			$filter['kp2thn'] = true;
+		if ($get['filter'] == 'kp1thn') {
+			$filter['kp1thn'] = true;
 		}
 
 		if ($get['berkas'] == 'true') {

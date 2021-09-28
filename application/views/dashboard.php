@@ -26,9 +26,9 @@
 
         <div class="card bg-secondary ml-5" style="width: 17rem;">
               <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-calendar mr-2"></i>KP 2 Tahun Kedepan</h5>
+              <h5 class="card-title"><i class="fas fa-calendar mr-2"></i>KP 1 Tahun Kedepan</h5>
               <div class="display-4"><?= $total_kp ?></div>
-              <a href="<?=base_url()?>pegawai?filter=kp2thn"><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>
+              <a href="<?=base_url()?>pegawai?filter=kp1thn"><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>
           </div>
         </div>
 
@@ -36,7 +36,7 @@
               <div class="card-body">
               <h5 class="card-title"><i class="fas fa-upload mr-2"></i>Upload Berkas</h5>
               <div class="display-4"><?= $total_berkas ?></div>
-              <a href="<?=base_url()?>pegawai?filter=kp2thn&berkas=true"><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>
+              <a href="<?=base_url()?>pegawai?filter=kp1thn&berkas=true"><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>
           </div>
         </div>
 
@@ -44,7 +44,7 @@
               <div class="card-body">
               <h5 class="card-title"><i class="fas fa-check mr-2"></i>Terverifikasi</h5>
               <div class="display-4"><?= $total_terverifikasi ?></div>
-              <a href="<?=base_url()?>pegawai?filter=kp2thn&berkas=true&verifikasi=true"><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>
+              <a href="<?=base_url()?>pegawai?filter=kp1thn&berkas=true&verifikasi=true"><p class="card-text text-white">Lihat Detail <i class="fas fa-angle-double-right ml-2"></i></p></a>
           </div>
         </div>
 

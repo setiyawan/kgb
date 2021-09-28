@@ -12,8 +12,8 @@ class PegawaiModel extends CI_Model {
             $this->db->where($where_caluse);
         }
 
-        if (!empty($filter['kp2thn'])) {
-            $where_caluse = 'tmt_jabatan_berikutnya between now() and (NOW() + INTERVAL 2 YEAR)';
+        if (!empty($filter['kp1thn'])) {
+            $where_caluse = 'tmt_jabatan_berikutnya between now() and (NOW() + INTERVAL 1 YEAR)';
             $this->db->where($where_caluse);
         }
 

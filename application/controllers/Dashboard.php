@@ -31,7 +31,7 @@ class Dashboard extends My_Controller {
     
     public function index() {
     	$filter['kgb2bln'] = true;
-    	$filter1['kp2thn'] = true;
+    	$filter1['kp1thn'] = true;
     	
     	$filter2['berkas_url'] = 1;
     	$filter2 = array_merge($filter1, $filter2);
